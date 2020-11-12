@@ -7,7 +7,7 @@ import { More } from "./More/More";
 
 export const Left: React.FC = () => {
   return (
-    <>
+    <> // zbytecny
       <div className="Left">
         <div className="grid">
           <Country />
