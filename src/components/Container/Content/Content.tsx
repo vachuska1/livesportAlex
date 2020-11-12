@@ -6,7 +6,7 @@ import { Right } from "./Right/Right";
 
 export const Content: React.FC = () => {
   return (
-    <>
+    <> // zase zbytecny, mas to totiz zabaleny v contentu, tohle by si tady musel mit pouze tehdy, kdyz bys nemel ten div s classou Content
       <div className="Content">
         <Left />
         <Middle />
