@@ -4,10 +4,8 @@ import { Content } from "./Content/Content";
 
 export const Container: React.FC = () => {
   return (
-    <>
-      <div className="Container">
-        <Content>sdsadsadasdsds</Content>
-      </div>
-    </>
+    <div className="Container">
+      <Content />
+    </div>
   );
 };

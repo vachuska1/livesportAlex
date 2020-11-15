@@ -1,0 +1,67 @@
+.Englcomp {
+  display: flex;
+  justify-content: left;
+  background-color: #ffe1af;
+  height: 25px;
+  border-bottom: 1px solid rgb(194, 190, 190);
+}
+.checkbox {
+  margin: 6px 16px 6px 6px;
+  width: 15px !important;
+  height: 15px !important;
+  -webkit-appearance: none;
+  appearance: none;
+  outline-offset: -2px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  &--1 {
+    outline: 1px solid rgb(107, 103, 103);
+  }
+  &--1:checked {
+    background-color: rgb(18, 158, 18);
+    outline: 1px solid rgb(18, 158, 18);
+  }
+  &--1:checked::after {
+    padding-left: 2px;
+    content: "✔";
+    color: white;
+  }
+  &--2 {
+    margin-right: 320px !important;
+    margin-top: -3px;
+    cursor: pointer;
+  }
+  &--2:before {
+    color: rgb(255, 197, 5);
+    font-size: 23px;
+    content: "🟊";
+  }
+}
+// input[type="checkbox"]:checked:after:hover {
+//   background-color: rgba(220, 134, 88, 0.5);
+// }
+.League {
+  width: 200px;
+  font-size: 11px;
+  margin: 6px 10px 0 0;
+  color: #656565;
+  font-weight: 700;
+}
+.Table {
+  margin-right: 10px;
+  font-size: 10px;
+  color: #656565;
+  text-decoration: underline;
+  margin-top: 6px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.Open {
+  padding-top: 8px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(202, 192, 192);
+  cursor: pointer;
+}

@@ -1,10 +1,16 @@
 import * as React from "react";
 import "./Middle.less";
+import { Menu } from "./Menu/Menu";
+import { Competitions } from "./Competitions/Competitions";
 
 export const Middle: React.FC = () => {
   return (
     <>
-      <div className="Middle"></div>
+      <div className="Middle">
+        <div className="grid">
+          <Menu /> <Competitions />
+        </div>
+      </div>
     </>
   );
 };

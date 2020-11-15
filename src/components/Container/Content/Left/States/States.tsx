@@ -1,15 +1,20 @@
 import * as React from "react";
 import "./States.less";
+import { England } from "./England/England";
+import { Albania } from "./Albania/Albania";
+import { Algeria } from "./Algeria/Algeria";
+import { Andorra } from "./Andorra/Andorra";
+import { Angola } from "./Angola/Angola";
 
 export const States: React.FC = () => {
   return (
     <>
       <div className="States">
-        <div className="States States--1">Albánie</div>
-        <div className="States States--2">Alžírsko</div>
-        <div className="States States--3">Andorra</div>
-        <div className="States States--4">Anglie</div>
-        <div className="States States--5">Angola</div>
+        <England />
+        <Albania />
+        <Algeria />
+        <Andorra />
+        <Angola />
       </div>
     </>
   );
