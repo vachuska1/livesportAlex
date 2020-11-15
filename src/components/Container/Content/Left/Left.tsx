@@ -7,21 +7,17 @@ import { More } from "./More/More";
 
 export const Left: React.FC = () => {
   return (
-    <>
-      {" "}
-      // zbytecny
-      <div className="Left">
-        <div className="grid">
-          <Country />
-          <States />
-          {/* <States> Albánie </States>
-          <States>Alžírsko </States>
-          <States>Andorra</States>
-          <States>Anglie</States>
-          <States>ssss</States> */}
-          <More />
-        </div>
+    <div className="Left">
+      <div className="grid">
+        <Country />
+        <States />
+        {/* <States> Albánie </States>
+        <States>Alžírsko </States>
+        <States>Andorra</States>
+        <States>Anglie</States>
+        <States>ssss</States> */}
+        <More />
       </div>
-    </>
+    </div>
   );
 };
