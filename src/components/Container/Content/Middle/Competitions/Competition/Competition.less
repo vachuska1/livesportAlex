@@ -1,12 +1,16 @@
-.Czechcomp {
-  display: flex;
-  justify-content: left;
+.Competition {
+  display: grid;
   background-color: #ffe1af;
-  height: 25px;
   border-bottom: 1px solid rgb(194, 190, 190);
+  grid-template:
+    "checkbox title table open" 27px /
+    25px 575px 70px 30px;
+}
+.Checkbox {
+  grid-area: checkbox;
 }
 .checkbox {
-  margin: 6px 16px 6px 6px;
+  margin-top: 6px;
   width: 15px !important;
   height: 15px !important;
   -webkit-appearance: none;
@@ -27,28 +31,29 @@
     content: "✔";
     color: white;
   }
-  &--2 {
-    margin-right: 410px;
-    margin-top: -3px;
-    cursor: pointer;
-  }
-  &--2:before {
-    color: rgb(255, 197, 5);
-    font-size: 23px;
-    content: "🟊";
-  }
+  //   }
+  //   &--2 {
+  //     margin-right: 320px !important;
+  //     margin-top: -3px;
+  //     cursor: pointer;
+  //   }
+  //   &--2:before {
+  //     color: rgb(255, 197, 5);
+  //     font-size: 23px;
+  //     content: "🟊";
+  //   }
+  // }
 }
-// input[type="checkbox"]:checked:after:hover {
-//   background-color: rgba(220, 134, 88, 0.5);
-// }
-.League {
+.Title {
+  text-align: left;
+  grid-area: title;
   font-size: 11px;
-  margin: 6px 10px 0 0;
+  margin: 6px 0 0 25px;
   color: #656565;
   font-weight: 700;
 }
 .Table {
-  margin-right: 10px;
+  grid-area: table;
   font-size: 10px;
   color: #656565;
   text-decoration: underline;
@@ -59,8 +64,10 @@
   }
 }
 .Open {
-  padding-top: 8px;
-  padding-left: 10px;
+  grid-area: open;
+  font-size: 30px;
+  padding-top: 6px;
+  padding-left: 5px;
   border-left: 1px solid rgba(202, 192, 192);
   cursor: pointer;
 }

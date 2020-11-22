@@ -7,9 +7,7 @@ export const Middle: React.FC = () => {
   return (
     <>
       <div className="Middle">
-        <div className="grid">
-          <Menu /> <Competitions />
-        </div>
+        <Menu /> <Competitions />
       </div>
     </>
   );

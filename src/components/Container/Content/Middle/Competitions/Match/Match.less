@@ -1,0 +1,62 @@
+.Match {
+  display: grid;
+  grid-template:
+    "checkbox end home result away halftime" 23px /
+    25px 75px 200px 50px 200px 120px;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgb(194, 190, 190);
+  font-size: 11px;
+  color: grey;
+}
+.CheckboxMatch {
+  padding-top: 1px;
+  grid-area: checkbox;
+}
+.checkboxMatch {
+  width: 15px !important;
+  height: 15px !important;
+  -webkit-appearance: none;
+  appearance: none;
+  outline-offset: -2px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  &--1 {
+    outline: 1px solid rgb(107, 103, 103);
+  }
+  &--1:checked {
+    background-color: rgb(18, 158, 18);
+    outline: 1px solid rgb(18, 158, 18);
+  }
+  &--1:checked::after {
+    padding-left: 2px;
+    content: "✔";
+    color: white;
+  }
+}
+.End {
+  grid-area: end;
+  text-align: center;
+  padding-top: 4px;
+}
+.Home {
+  grid-area: home;
+  padding: 4px 10px 0 0;
+  text-align: right;
+}
+.Result {
+  grid-area: result;
+  font-size: 12px;
+  font-weight: 700;
+  padding-top: 4px;
+}
+.Away {
+  text-align: left;
+  padding: 4px 0 0 10px;
+  grid-area: away;
+}
+.Halftime {
+  text-align: left;
+  padding-top: 4px;
+  grid-area: halftime;
+}
