@@ -25,6 +25,10 @@ export const States: React.FC = () => {
         <State name="Egypt" />
         <State name="Angola" />
         <State name="Astralie" />
+        <State name="Nemecko" extendClass={"state--hidden"} />
+        <State name="Nizozemsko" extendClass={"state--hidden"} />
+        <State name="Portugalsko" extendClass={"state--hidden"} />
+        <State name="Spanelsko" extendClass={"state--hidden"} />
       </div>
       <div className={isActive ? "clicked" : "More"} onClick={toggleClass}>
         Více
