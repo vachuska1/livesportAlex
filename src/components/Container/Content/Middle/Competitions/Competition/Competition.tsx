@@ -11,6 +11,15 @@ export const Competition: React.FC<CompetitionProps> = (props) => {
   const handleClick = () => {
     setChecked(!checked);
   };
+  const toggleMatches = () => {
+    let matches = document.getElementsByClassName("Match");
+    for (let i = 0; i < matches.length; i++) {
+      if (matches[i].className.includes("Match--hidden")) {
+        matches[i].classList.remove("Match--hidden");
+      } else matches[i].classList.add("Match--hidden");
+    }
+  };
+
   return (
     <div className="Competition">
       <div className="Checkbox">
@@ -23,7 +32,9 @@ export const Competition: React.FC<CompetitionProps> = (props) => {
       </div>
       <div className="Title">{props.league}</div>
       <div className="Table">Tabulka</div>
-      <div className="Open">{"ˇ"}</div>
+      <div className="Open" onClick={toggleMatches}>
+        {"ˇ"}{" "}
+      </div>
     </div>
   );
 };

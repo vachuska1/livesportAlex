@@ -1,5 +1,6 @@
 import * as React from "react";
 import { States } from "./States/States";
+import "./Left.less";
 
 export const Left: React.FC = () => {
   return (
