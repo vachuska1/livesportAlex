@@ -12,7 +12,7 @@ export const Datecont: React.FC = () => {
         {date}/{month + 1} {day}
         <div className="dropdown-content">
           <a href="#">
-            {date + 1}/{month + 1} {day }
+            {date + 1}/{month + 1} {day}
           </a>
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>

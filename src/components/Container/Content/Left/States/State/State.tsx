@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
-import "/Users/Putin's slut/Desktop/AlesReact/projektLivesport9.11.2020/livesport/src/components/Container/Content/Left/States/States.less";
+import "../States.less";
 
 interface StateProps {
   name: string;
