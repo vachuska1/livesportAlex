@@ -7,8 +7,10 @@ import "../More/More.less";
 
 export const States: React.FC = () => {
   const [isActive, setActive] = useState(false);
+  const [hiddenState, setHiddenState] = useState("state--hidden");
 
   const toggleClass = () => {
+    setHiddenState("");
     setActive(!isActive);
   };
 
@@ -25,10 +27,10 @@ export const States: React.FC = () => {
         <State name="Egypt" />
         <State name="Angola" />
         <State name="Astralie" />
-        <State name="Nemecko" extendClass={"state--hidden"} />
-        <State name="Nizozemsko" extendClass={"state--hidden"} />
-        <State name="Portugalsko" extendClass={"state--hidden"} />
-        <State name="Spanelsko" extendClass={"state--hidden"} />
+        <State name="Nemecko" extendClass={hiddenState} />
+        <State name="Nizozemsko" extendClass={hiddenState} />
+        <State name="Portugalsko" extendClass={hiddenState} />
+        <State name="Spanelsko" extendClass={hiddenState} />
       </div>
       <div className={isActive ? "clicked" : "More"} onClick={toggleClass}>
         Více
