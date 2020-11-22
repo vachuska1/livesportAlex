@@ -32,9 +32,7 @@ export const Competition: React.FC<CompetitionProps> = (props) => {
       </div>
       <div className="Title">{props.league}</div>
       <div className="Table">Tabulka</div>
-      <div className="Open" onClick={toggleMatches}>
-        {"ˇ"}{" "}
-      </div>
+      <div className="Open" onClick={toggleMatches} />
     </div>
   );
 };
