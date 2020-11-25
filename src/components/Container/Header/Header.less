@@ -1,0 +1,275 @@
+.Header {
+  display: grid;
+  &__up {
+    font-size: 11px;
+    font-weight: 400;
+    background-color: rgb(67, 64, 64);
+    height: 27px;
+    display: grid;
+    grid-template:
+      ". headupcont ." 27px /
+      1fr 1000px 1fr;
+    &--cont {
+      grid-area: headupcont;
+      display: flex;
+      color: rgb(197, 196, 196);
+      padding: 7px 10px;
+    }
+  }
+  &__middle {
+    display: grid;
+    background-color: #1b7700;
+    height: 80px;
+    grid-template:
+      ". headmiddlecont ." auto /
+      1fr 1000px 1fr;
+    &--cont {
+      grid-area: headmiddlecont;
+      display: flex;
+      .logo {
+        cursor: pointer;
+        margin-right: 340px;
+        margin-top: 5px;
+        background: url(../../../images/icons/livesportlogo.png) no-repeat;
+        width: 300px;
+      }
+      .switch {
+        margin-top: 25px;
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 28px;
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        input:checked + .slider {
+          background-color: #044606;
+        }
+        input:focus + .slider {
+          box-shadow: 0 0 1px #044606;
+        }
+        input:checked + .slider:before {
+          transform: translateX(26px);
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #044606;
+          transition: 0.4s;
+          &--round {
+            border-radius: 34px;
+          }
+          &--round::before {
+            border-radius: 50%;
+            background: url(../../../images/icons/sun.svg) no-repeat center/40px;
+          }
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 28px;
+          width: 28px;
+          left: 1px;
+          background-color: white;
+          transition: 0.4s;
+        }
+      }
+      .search {
+        background: url(../../../images/icons/search.svg) no-repeat center/18px;
+        width: 35px;
+        margin: 25px 10px 25px 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #085f00;
+        }
+      }
+      .setting {
+        background: url(../../../images/icons/settings.svg) no-repeat
+          center/20px;
+        width: 35px;
+        margin: 25px 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: #085f00;
+        }
+      }
+      .login {
+        width: 80px;
+        margin: 25px 10px 25px 0;
+        padding: 8px 2px 5px 2px;
+        font-size: 11px;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: #085f00;
+        }
+      }
+      .registration {
+        font-weight: 500;
+        font-size: 12px;
+        background-color: rgb(6, 65, 12);
+        width: 80px;
+        margin: 25px 40px 25px 0;
+        padding: 8px 5px 5px 5px;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__down {
+    display: grid;
+    background-color: #085f00;
+    height: 40px;
+    grid-template:
+      ". headdowncont ." auto /
+      1fr 1000px 1fr;
+    &--cont {
+      grid-area: headdowncont;
+      display: flex;
+      justify-content: space-between;
+      .sport {
+        display: flex;
+        .football {
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          margin-left: 10px;
+          background-color: white;
+          color: grey;
+          &--icon {
+            background: url(../../../images/icons/football.svg) no-repeat
+              center/40px;
+            width: 20px;
+            height: 42px;
+          }
+          &--name {
+            font-size: 10px;
+            font-weight: 700;
+            padding-top: 14px;
+          }
+          &--count {
+            margin-top: 12px;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid grey;
+            background-color: grey;
+            border-radius: 50%;
+            font-size: 8px;
+            color: white;
+          }
+        }
+        .tennis {
+          color: white;
+          margin-left: 5px;
+          &--icon {
+            background: url(../../../images/icons/tennis.svg) no-repeat
+              center/40px;
+          }
+        }
+        .basketball {
+          color: white;
+          margin-left: 5px;
+          &--icon {
+            background: url(../../../images/icons/basketball.svg) no-repeat
+              center/40px;
+          }
+        }
+        .handball {
+          color: white;
+          margin-left: 5px;
+          &--icon {
+            background: url(../../../images/icons/handball.svg) no-repeat
+              center/40px;
+          }
+        }
+        .volleyball {
+          color: white;
+          margin-left: 5px;
+          &--icon {
+            background: url(../../../images/icons/voleyball.svg) no-repeat
+              center/40px;
+          }
+        }
+        .hockey,
+        .tennis,
+        .basketball,
+        .handball,
+        .volleyball {
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          &:hover {
+            background-color: rgb(6, 65, 12);
+          }
+          &--icon {
+            width: 20px;
+            height: 42px;
+          }
+          &--name {
+            font-size: 10px;
+            font-weight: 700;
+            padding-top: 14px;
+          }
+          &--count {
+            margin-top: 12px;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            border: 1px solid rgb(6, 65, 12);
+            background-color: rgb(6, 65, 12);
+            border-radius: 50%;
+            font-size: 8px;
+            color: white;
+          }
+        }
+        .hockey {
+          color: white;
+          padding-left: 5px;
+          &--icon {
+            background: url(../../../images/icons/hockey.svg) no-repeat
+              center/40px;
+          }
+          &--count {
+            text-align: right;
+            margin-left: 5px;
+            padding-right: 10px;
+            width: 2px;
+          }
+        }
+      }
+      .othersport {
+        margin-right: 10px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        &:hover {
+          background-color: rgb(6, 65, 12);
+        }
+        &--icon {
+          background: url(../../../images/icons/othersportarrow.svg) no-repeat
+            center/40px;
+          width: 20px;
+          height: 42px;
+          padding-left: 10px;
+        }
+        &--name {
+          margin: 5px 10px 0 10px;
+          padding-top: 5px;
+          font-size: 10px;
+          font-weight: 700;
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
