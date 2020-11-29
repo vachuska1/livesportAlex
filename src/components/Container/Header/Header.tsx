@@ -34,6 +34,12 @@ export const Header: React.FC = () => {
       document.body.classList.remove("theme--dark");
     }
     setChange(!isChange);
+    const switcher = document.getElementById("switch")!;
+    if (switcher.classList.contains("switch--dark")) {
+      switcher.classList.remove("switch--dark");
+    } else {
+      switcher.classList.add("switch--dark");
+    }
     // let change = document.getElementsByClassName("Contentcont");
     // for (let e = 0; e < change.length; e++) {
     //   if (change[e].className.includes("Contentcont--change")) {
@@ -58,7 +64,9 @@ export const Header: React.FC = () => {
       <div className="Header Header__middle">
         <div className="Header Header__middle Header__middle--cont">
           <div className="logo"></div>
-          <div className={"switch"} />
+          <div id={"switch"} className={"switch"} onClick={toggleChange}>
+            <div className={"switch__change"} />
+          </div>
           <div className="search" onClick={togglePopup}>
             {isOpenPopup && <Popup />}
           </div>

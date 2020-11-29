@@ -33,36 +33,6 @@
         background: url(../../../images/icons/livesportlogo.png) no-repeat;
         width: 300px;
       }
-      .switch {
-        margin-top: 25px;
-        position: relative;
-        display: inline-block;
-        width: 55px;
-        height: 28px;
-        background: #fff;
-        border-radius: 12px;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 1px;
-          left: 0;
-          width: 26px;
-          height: 26px;
-          background: url("../../../images/icons/sun.svg") no-repeat center/10px;
-          transform: scale(4.5);
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          top: 1px;
-          right: 0;
-          width: 26px;
-          height: 26px;
-          background: url("../../../images/icons/moon.svg") no-repeat
-            center/10px;
-          transform: scale(4.5);
-        }
-      }
       .search {
         background: url(../../../images/icons/search.svg) no-repeat center/18px;
         width: 35px;
@@ -362,6 +332,50 @@
           padding-top: 10px;
         }
       }
+    }
+  }
+}
+
+.switch {
+  margin-top: 25px;
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+  background: #e6e6e6;
+  border-radius: 12px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background: url("../../../images/icons/sun.svg") no-repeat center/10px;
+    transform: scale(4.5);
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    background: url("../../../images/icons/moon.svg") no-repeat center/10px;
+    transform: scale(4.5);
+    z-index: 2;
+  }
+  &__change {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    .switch--dark & {
+      left: 20px;
     }
   }
 }
