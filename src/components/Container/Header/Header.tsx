@@ -58,19 +58,7 @@ export const Header: React.FC = () => {
       <div className="Header Header__middle">
         <div className="Header Header__middle Header__middle--cont">
           <div className="logo"></div>
-          <label className="switch">
-            <input
-              type="checkbox"
-              checked={isDark}
-              onChange={(event) => setIsDark(!isDark)}
-              onClick={toggleChange}
-            />
-            {/* <div className="changeicon">
-              <div className="changeicon changeicon--1"></div>
-              <div className="changeicon changeicon--2"></div>
-            </div> */}
-            <div className="slider slider--round"></div>
-          </label>
+          <div className={"switch"} />
           <div className="search" onClick={togglePopup}>
             {isOpenPopup && <Popup />}
           </div>
