@@ -28,19 +28,24 @@ export const Header: React.FC = () => {
   };
 
   const toggleChange = () => {
+    if (!isChange) {
+      document.body.classList.add("theme--dark");
+    } else {
+      document.body.classList.remove("theme--dark");
+    }
     setChange(!isChange);
-    let change = document.getElementsByClassName("Contentcont");
-    for (let e = 0; e < change.length; e++) {
-      if (change[e].className.includes("Contentcont--change")) {
-        change[e].classList.remove("Contentcont--change");
-      } else change[e].classList.add("Contentcont--change");
-    }
-    let changing = document.getElementsByClassName("Content");
-    for (let i = 0; i < changing.length; i++) {
-      if (changing[i].className.includes("Content--change")) {
-        changing[i].classList.remove("Content--change");
-      } else changing[i].classList.add("Content--change");
-    }
+    // let change = document.getElementsByClassName("Contentcont");
+    // for (let e = 0; e < change.length; e++) {
+    //   if (change[e].className.includes("Contentcont--change")) {
+    //     change[e].classList.remove("Contentcont--change");
+    //   } else change[e].classList.add("Contentcont--change");
+    // }
+    // let changing = document.getElementsByClassName("Content");
+    // for (let i = 0; i < changing.length; i++) {
+    //   if (changing[i].className.includes("Content--change")) {
+    //     changing[i].classList.remove("Content--change");
+    //   } else changing[i].classList.add("Content--change");
+    // }
   };
 
   return (
