@@ -1,0 +1,108 @@
+.registration-box {
+  z-index: 1 !important;
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .box {
+    position: relative;
+    width: 30%;
+    margin: 20vh auto 0 auto;
+    width: 38vw;
+    max-height: 80vh;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0 10px 0 0;
+    border: 1px solid #999;
+    overflow: auto;
+    .boxing {
+      display: grid;
+      grid-template:
+        "picture text" auto /
+        60% 40%;
+      .picture {
+        display: grid;
+        grid-area: picture;
+        margin-right: 10px;
+        background: url(../../../../images/picture/registration.jpg) no-repeat
+          center;
+        width: 380px;
+        height: 500px;
+        background-size: cover;
+        margin: none;
+        .rows {
+          font-weight: 600;
+          text-align: justify;
+          justify-content: center;
+          float: center;
+          height: 200px;
+          display: grid;
+          color: white !important;
+          .rowone {
+            margin-top: 20px;
+          }
+        }
+      }
+      .textcont {
+        display: grid;
+        grid-area: text;
+        height: 400px;
+        margin-top: -10px;
+        .login {
+          width: 11vw;
+          color: black !important;
+          font-size: 14px;
+          font-weight: 700;
+        }
+        .facebook,
+        .google,
+        .apple {
+          color: white !important;
+          justify-content: center;
+          text-transform: uppercase;
+          font-weight: 700;
+          width: 15, 5vw;
+          padding: 15px 7px 3px 7px;
+        }
+        .facebook {
+          background-color: #4267b2;
+        }
+        .google {
+          margin-top: 5px;
+          background-color: #4285f4;
+        }
+        .apple {
+          margin-top: 5px;
+          background-color: black;
+        }
+        .email,
+        .password {
+          color: grey !important;
+          font-size: 11px;
+          padding: 7px;
+          border: none;
+        }
+        .email {
+          margin-top: 20px;
+          border: 1px solid rgb(223, 219, 219);
+        }
+        .password {
+          border-bottom: 1px solid rgb(223, 219, 219);
+          border-left: 1px solid rgb(223, 219, 219);
+          border-right: 1px solid rgb(223, 219, 219);
+        }
+        .logging {
+          background-color: #1b7700;
+          color: white;
+          padding: 15px 7px 3px 7px;
+          margin-top: 7px;
+          font-weight: 700;
+          font-size: 11px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

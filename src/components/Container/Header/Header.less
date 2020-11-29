@@ -125,6 +125,115 @@
       }
     }
   }
+  &__middle2 {
+    display: grid;
+    background-color: #131a11;
+    height: 80px;
+    grid-template:
+      ". headmiddlecont ." auto /
+      1fr 1000px 1fr;
+    &--cont {
+      grid-area: headmiddlecont;
+      display: flex;
+      .logo {
+        cursor: pointer;
+        margin-right: 340px;
+        margin-top: 5px;
+        background: url(../../../images/icons/livesportlogo.png) no-repeat;
+        width: 300px;
+      }
+      .switch {
+        margin-top: 25px;
+        position: relative;
+        display: inline-block;
+        width: 55px;
+        height: 28px;
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        input:checked + .slider {
+          background-color: #044606;
+        }
+        input:focus + .slider {
+          box-shadow: 0 0 1px #044606;
+        }
+        input:checked + .slider:before {
+          transform: translateX(26px);
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #044606;
+          transition: 0.4s;
+          &--round {
+            border-radius: 34px;
+          }
+          &--round::before {
+            border-radius: 50%;
+            background: url(../../../images/icons/sun.svg) no-repeat center/40px;
+          }
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 28px;
+          width: 28px;
+          left: 1px;
+          background-color: white;
+          transition: 0.4s;
+        }
+      }
+      .search {
+        background: url(../../../images/icons/search.svg) no-repeat center/18px;
+        width: 35px;
+        margin: 25px 10px 25px 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: #085f00;
+        }
+      }
+      .setting {
+        background: url(../../../images/icons/settings.svg) no-repeat
+          center/20px;
+        width: 35px;
+        margin: 25px 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: #085f00;
+        }
+      }
+      .login {
+        width: 80px;
+        margin: 25px 10px 25px 0;
+        padding: 8px 2px 5px 2px;
+        font-size: 11px;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: #085f00;
+        }
+      }
+      .registration {
+        font-weight: 500;
+        font-size: 12px;
+        background-color: rgb(6, 65, 12);
+        width: 80px;
+        margin: 25px 40px 25px 0;
+        padding: 8px 5px 5px 5px;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
   &__down {
     display: grid;
     background-color: #085f00;

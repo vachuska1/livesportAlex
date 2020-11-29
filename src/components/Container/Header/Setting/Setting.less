@@ -1,0 +1,62 @@
+.setting-box {
+  z-index: 1;
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .box {
+    position: relative;
+    width: 30%;
+    margin: 20vh auto 0 auto;
+    height: auto;
+    max-height: 50vh;
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    overflow: auto;
+    .textcont {
+      display: grid;
+      margin-top: -10px;
+    }
+    .setting {
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .result {
+      width: 28vw;
+      border-top: 1px solid rgb(179, 176, 176);
+      border-bottom: 1px solid rgb(179, 176, 176);
+      margin-top: 5px;
+      background-color: rgb(232, 232, 232);
+      text-align: left;
+      padding: 10px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: rgb(61, 57, 57);
+    }
+    .classify {
+      display: flex;
+      margin: 10px 0 0 10px;
+      font-size: 10px;
+      font-weight: 700;
+      text-align: left;
+      color: grey;
+    }
+    .nametime {
+      display: flex;
+      font-size: 10px;
+      color: grey;
+      padding: 10px 5px;
+      .name,
+      .time {
+        margin: 2px 0 0 2px;
+      }
+      .radio {
+        margin-left: 20px;
+      }
+    }
+  }
+}

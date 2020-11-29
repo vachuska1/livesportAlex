@@ -1,9 +1,47 @@
 import * as React from "react";
 import { useState } from "react";
 import "./Header.less";
+import { Login } from "./Login/Login";
+import { Popup } from "./Popup/Popup";
+import { Registration } from "./Registration/Registration";
+import { Setting } from "./Setting/Setting";
 
 export const Header: React.FC = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isChange, setChange] = useState(false);
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
+  const [isOpenSetting, setIsOpenSetting] = useState(false);
+  const [isOpenLogin, setIsOpenLogin] = useState(false);
+  const [isOpenRegistration, setIsOpenRegistration] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpenPopup(!isOpenPopup);
+  };
+  const toggleSetting = () => {
+    setIsOpenSetting(!isOpenSetting);
+  };
+  const toggleLogin = () => {
+    setIsOpenLogin(!isOpenLogin);
+  };
+  const toggleRegistration = () => {
+    setIsOpenRegistration(!isOpenRegistration);
+  };
+
+  const toggleChange = () => {
+    setChange(!isChange);
+    let change = document.getElementsByClassName("Contentcont");
+    for (let e = 0; e < change.length; e++) {
+      if (change[e].className.includes("Contentcont--change")) {
+        change[e].classList.remove("Contentcont--change");
+      } else change[e].classList.add("Contentcont--change");
+    }
+    let changing = document.getElementsByClassName("Content");
+    for (let i = 0; i < changing.length; i++) {
+      if (changing[i].className.includes("Content--change")) {
+        changing[i].classList.remove("Content--change");
+      } else changing[i].classList.add("Content--change");
+    }
+  };
 
   return (
     <div className="Header">
@@ -20,6 +58,7 @@ export const Header: React.FC = () => {
               type="checkbox"
               checked={isDark}
               onChange={(event) => setIsDark(!isDark)}
+              onClick={toggleChange}
             />
             {/* <div className="changeicon">
               <div className="changeicon changeicon--1"></div>
@@ -27,10 +66,18 @@ export const Header: React.FC = () => {
             </div> */}
             <div className="slider slider--round"></div>
           </label>
-          <div className="search"></div>
-          <div className="setting"></div>
-          <div className="login">přihlášení</div>
-          <div className="registration">REGISTRACE</div>
+          <div className="search" onClick={togglePopup}>
+            {isOpenPopup && <Popup />}
+          </div>
+          <div className="setting" onClick={toggleSetting}>
+            {isOpenSetting && <Setting />}
+          </div>
+          <div className="login" onClick={toggleLogin}>
+            {isOpenLogin && <Login />}přihlášení
+          </div>
+          <div className="registration" onClick={toggleRegistration}>
+            {isOpenRegistration && <Registration />}REGISTRACE
+          </div>
         </div>
       </div>
       <div className="Header Header__down">
